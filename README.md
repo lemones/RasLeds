@@ -13,4 +13,6 @@ echo none > /sys/class/leds/led0/trigger
 echo none > /sys/class/leds/led1/trigger
 ```
 Make /sys/class/leds/led*/* writable for user to skip using sudo
-Permissions are reverted after reboot. Use the ledpermission.service to fix at boot.
+
+Permissions to the led* files are reverted after reboot. 
+Use the ledpermission.service to fix at boot.
