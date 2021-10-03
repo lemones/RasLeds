@@ -2,7 +2,7 @@
 """
 Blink blink ;) ;)
 """
-import time
+from time import sleep
 
 RED_FILE = "/sys/class/leds/led1/brightness"
 GREEN_FILE = "/sys/class/leds/led0/brightness"
@@ -46,11 +46,11 @@ def led_blink(times, long):
     # Calls led_on/off for [times] every [long]
     for i in range(times):
         # Green On, Red Off
-        time.sleep(long)
+        sleep(long)
         led_on('green')
         led_off('red')
         # Red On, Green Off
-        time.sleep(long)
+        sleep(long)
         led_off('green')
         led_on('red')
 
